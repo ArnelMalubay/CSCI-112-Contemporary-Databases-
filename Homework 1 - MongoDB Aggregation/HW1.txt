@@ -1,0 +1,38 @@
+//Instructions: Write the queries to get the following pieces of information:
+
+// 1. Get the number of cases for each region grouped by Sex
+
+db.linelist.aggregate([
+    {"$project" : {
+                  "_id" : 0,
+                  "Region" : 1,
+                  "male": {"$toInt" : { $eq: [ "$Sex", "MALE" ] }},
+                  "female": {"$toInt" : { $eq: [ "$Sex", "FEMALE" ] }}
+                  }
+    },
+
+    {"$group" : {
+                "_id" : "$Region",
+                "male_cases" : {"$sum" : "$male"},
+                "female_cases" : {"$sum" : "$female"}
+                }
+    }
+])
+
+//2. For cases in the NCR region, get number of cases per day, sorted ascendingly by Report Date
+
+db.linelist.aggregate([
+    {"$match" : {
+                "Region" : "NCR"
+                }},
+                
+    {"$group" : {
+                "_id" : "$Report_Date",
+                "num_cases" : {"$sum" : 1}
+                }},
+                
+    {"$sort" : {
+                "_id" : 1
+               }}
+
+])

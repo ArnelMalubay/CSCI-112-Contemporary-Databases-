@@ -1,0 +1,10 @@
+Your users may not want to see all their orders at once. Some of them are only concerned with Pending orders, and others 
+may only be concerned with orders that are Shipping. Re-model the database to easily retrieve or filter a user’s order by 
+status and by date.
+
+Your fulfillment center wants to retrieve all Pending orders, so they can begin fulfilling the orders. Re-model the 
+database so you can easily retrieve all Pending orders for your fulfillment center warehouse.
+
+Submit a zip file with all if your code. I also highly recommend justifying your data model. You may justify it 
+through this submission link, or you can include a Document in the zip file for your justification. This will also 
+allow me to easily give out more partial points based on your ideas.

@@ -1,0 +1,4 @@
+Write a Python application that uses PyMongo to connect to MongoDB, include a function that will retrieve the following 
+piece of information:
+
+Find the top 5 classes with the highest average exam score

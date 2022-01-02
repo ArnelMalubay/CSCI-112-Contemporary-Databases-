@@ -1,0 +1,14 @@
+Given the infections data in this CSV file, write Python code that will extract this data and insert it into DynamoDB in 
+a table called infections. You will need a CSV reader to be able iterate over the CSV records, e.g. csv.Dictreader(), 
+pandas.read_csv(). (35pts)
+
+The project manager has told you that some patients have patient records coming in. Patients 1, 2, and 3 all have patient 
+record files that came in.
+
+https://us-west-2-aws-staging.s3.amazonaws.com/awsu-ilt/AWS-100-DEV/v2.2/binaries/input/lab-3-dynamoDB/PatientRecord1.txt 
+
+https://us-west-2-aws-staging.s3.amazonaws.com/awsu-ilt/AWS-100-DEV/v2.2/binaries/input/lab-3-dynamoDB/PatientRecord2.txt 
+
+https://us-west-2-aws-staging.s3.amazonaws.com/awsu-ilt/AWS-100-DEV/v2.2/binaries/input/lab-3-dynamoDB/PatientRecord3.txt 
+
+Write a Python function that will update those entries and add a PatientReportUrl attribute with the above URLs as the value.
